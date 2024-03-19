@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #404041;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Align items in a column */
+    align-items: center; /* Center items horizontally */
+}
+
+.title {
+    color: #ef9d10;
+    margin-bottom: 20px;
+    font-family: fantasy;
+    opacity: 0; /* Initially hide the title */
+    animation: slideInTitle 1s ease forwards; /* Animation for the title */
+    
+}
+
+@keyframes slideInTitle {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+
+.dice {
+    width: 150px;
+    height: 150px;
+    background-color: #FE2C55;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5em;
+    font-weight: bold;
+    color: #FFFFFF;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    opacity: 0; /* Initially hide the dice */
+    animation: slideInDice 1s ease forwards; /* Animation for the dice */
+    animation-delay: 1s; /* Delay the dice animation by 1 second */
+}
+
+@keyframes slideInDice {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(0); opacity: 1; }
+}
+.roll-button {
+    padding: 15px 30px;
+    font-size: 1.5em;
+    cursor: pointer;
+    font-family: 'Times New Roman';
+    background-color: #AAE847;
+    color: #020202;
+    border: 2px solid orangered; /* Adding border */
+    border-radius: 10px; /* Increasing border radius */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background color and text color */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    opacity: 0; /* Initially hide the button */
+    animation: slideInButton 1s ease forwards; /* Animation for the button */
+    animation-delay: 2s; /* Delay the button animation by 2 seconds */
+}
+
+.roll-button:hover {
+    background-color: white;
+    color: orangered; /* Changing text color on hover */
+}
+
+@keyframes slideInButton {
+    0% { transform: translateY(100%); }
+    100% { transform: translateY(0); opacity: 1; }
+}
